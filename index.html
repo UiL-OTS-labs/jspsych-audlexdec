@@ -108,20 +108,35 @@
         var chosen_keyboard = undefined;
 
         // first, i'll put the preloaders here, but maybe it's better in stimuli.js?
-        var test_beep = ['./sounds/beep.mp3'];
+        
+        var beep_audio = ['./sounds/beep.mp3'];
+        
+        ////////////////////////// media preloading ///////////////////////////////////////
 
         // create list of all audio files for preloading
-        var practice_audio = []; //here we want audio files, maybe not even needed?? (on load)
-        
+        var practice_audio = []; //here we want (path) audio files
         let practice_items = getPracticeItems().table; //let's just have them 'again'
-        console.log(practice_items);
         
         for (var i=0; i< practice_items.length; i++) {
             practice_audio.push(practice_items[i].filename);
-            console.log('loaded practice audio as practice_audio');
+            console.log('loaded practice audio as "practice_audio"');
         };
 
         console.log(practice_audio);
+
+        // ctest audio list
+        var test_audio = []; // the same...
+        let test_items = stimuli.table; //let's just have them 'before'
+        console.log(test_items);
+        
+        for (var i=0; i< test_items.length; i++) {
+            test_audio.push(test_items[i].filename);
+            console.log('loaded test audio as "test_audio"');
+        };
+
+        console.log(test_audio);
+
+        /////////////////// functions for key setting /////////////////////////////////
 
         function getLeftOrRightHanded()
         {
@@ -160,6 +175,8 @@
             subject: subject_id,
             group: group_name,
         });
+
+        // screens/(sub-)(trial-)phases...////////////////////////////////////////////////////
 
 
         let start_screen = {
@@ -475,8 +492,6 @@
             trial_duration: FIXCROSS_DURATION
         };
 
-
-
         // So this is a hack (or a clever use of Duck Typing)
         // We don't actually know the right keys when defining present_word,
         // but we need to give an array of choices anyway. This object mimics
@@ -506,6 +521,8 @@
             length: 2,
         };
 
+
+
         let present_word = {
             type: 'audio-keyboard-response',
             stimulus: jsPsych.timelineVariable('filename'), //this may nee inline func
@@ -513,6 +530,7 @@
             prompt: "#### respond ####",
             trial_ends_after_audio: false,
             trial_duration: RESPONSE_TIMEOUT_DURATION,
+            response_ends_trial: true,
             data: {
                 condition: jsPsych.timelineVariable('item_type'),
                 word: jsPsych.timelineVariable('word'),
@@ -587,7 +605,7 @@
         };
 
 
-        // procedures//////////////////////////////////////////////////////////
+        // (timeline) procedures //////////////////////////////////////////////////////////
 
         let survey_procedure = {
             timeline: [
@@ -632,29 +650,29 @@
             timeline:[
                 present_fixation,
                 present_word,
-                present_feedback,
+                present_feedback
             ],
             timeline_variables: getPracticeItems().table,
             randomize_order: false,
         };
 
-        let trial_procedure_pseudorandom = {
-            timeline:[
-                present_fixation,
-                present_word,
-            ],
-            timeline_variables: uil.randomization.randomizeStimuli(
-                stimuli.table,
-                MAX_SUCCEEDING_ITEMS_OF_TYPE,
-                'item_type',
-            ),
-            randomize_order: false // this should be false if uil randomization is used...
-        };
+        // let trial_procedure_pseudorandom = {
+        //     timeline:[
+        //         present_fixation,
+        //         present_word,
+        //     ],
+        //     timeline_variables: uil.randomization.randomizeStimuli(
+        //         stimuli.table,
+        //         MAX_SUCCEEDING_ITEMS_OF_TYPE,
+        //         'item_type',
+        //     ),
+        //     randomize_order: false // this should be false if uil randomization is used...
+        // };
 
         let trial_procedure_random = {
             timeline:[
                 present_fixation,
-                present_word,
+                present_word
             ],
             timeline_variables: stimuli.table,
             randomize_order: true // this should be true if you want jsPsych's randomization
@@ -683,13 +701,14 @@
         timeline.push(instruction_screen_practice);
         
         timeline.push(practice_procedure);
+
         timeline.push(well_done_screen);
 
         // NOTE options below! comment/uncomment for regular vs restrained randomization
         // true randomness is better for the current template's amount of items...
 
         //timeline.push(trial_procedure_pseudo_random); // don't do this with little stimuli
-        timeline.push(trial_procedure_random);
+        //timeline.push(trial_procedure_random);
         
         timeline.push(end_screen);
 
@@ -698,12 +717,13 @@
             jsPsych.init({
                 timeline: timeline,
                 preload_audio: [
-                    practice_audio
+                    practice_audio,
                     ],
                 exclusions: {
                     min_width: MIN_WIDTH,
                     min_height: MIN_HEIGHT
                 },
+                show_progress_bar: false,
                 use_webaudio: false,
                 on_finish: function() {
                     // the 'true' parameter is needed only for the acc. server

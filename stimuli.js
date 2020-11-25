@@ -16,7 +16,7 @@ const PRACTICE_ITEMS = [
 const LIST_GROUP1 = [
     { id: 1, item_type: NON_WORD, word: "slirque", filename: "./sounds/slirque.wav" },
     { id: 2, item_type: NON_WORD, word: "crawse", filename: "./sounds/crawse.wav" },
-    { id: 3, item_type: NON_WORD, word: "twurp", filename: "./sounds/twurp.wav" },
+    { id: 3, item_type: NON_WORD, word: "thwurp", filename: "./sounds/thwurp.wav" },
     { id: 4, item_type: NON_WORD, word: "clem", filename: "./sounds/clem.wav" },
     { id: 5, item_type: REAL_WORD, word: "white", filename: "./sounds/white.wav" },
     { id: 6, item_type: REAL_WORD, word: "travel", filename: "./sounds/travel.wav" },
