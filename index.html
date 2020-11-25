@@ -708,7 +708,7 @@
         // true randomness is better for the current template's amount of items...
 
         //timeline.push(trial_procedure_pseudo_random); // don't do this with little stimuli
-        //timeline.push(trial_procedure_random);
+        timeline.push(trial_procedure_random);
         
         timeline.push(end_screen);
 
@@ -718,6 +718,7 @@
                 timeline: timeline,
                 preload_audio: [
                     practice_audio,
+                    test_audio
                     ],
                 exclusions: {
                     min_width: MIN_WIDTH,
