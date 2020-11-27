@@ -550,11 +550,13 @@
                 switch (data.condition)
                 {
                     case 'REAL_WORD':
-                    case 'NON_WORD':
                         correct = data.key_press == convertToKeyCode(correct_key);
                         break;
-                    default:
+                    case 'NON_WORD':
                         correct = data.key_press == convertToKeyCode(incorrect_key);
+                        break;
+                    default:
+                        correct = 'unsure, this should not happen!'; //data.key_press == convertToKeyCode(incorrect_key);
                         break;
                 }
 
