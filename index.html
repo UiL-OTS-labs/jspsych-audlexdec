@@ -527,7 +527,7 @@
             type: 'audio-keyboard-response',
             stimulus: jsPsych.timelineVariable('filename'), //this may nee inline func
             choices: present_word_choices,
-            prompt: "#### respond ####",
+            prompt: "########",
             trial_ends_after_audio: false,
             trial_duration: RESPONSE_TIMEOUT_DURATION,
             response_ends_trial: true,
@@ -602,7 +602,6 @@
             },
             on_finish: function(data) {
                 data.audio_checked = true;
-                //console.log(data.audio_checked);
             }
         };
 
@@ -658,18 +657,18 @@
             randomize_order: false,
         };
 
-        // let trial_procedure_pseudorandom = {
-        //     timeline:[
-        //         present_fixation,
-        //         present_word,
-        //     ],
-        //     timeline_variables: uil.randomization.randomizeStimuli(
-        //         stimuli.table,
-        //         MAX_SUCCEEDING_ITEMS_OF_TYPE,
-        //         'item_type',
-        //     ),
-        //     randomize_order: false // this should be false if uil randomization is used...
-        // };
+        let trial_procedure_pseudorandom = {
+            timeline:[
+                present_fixation,
+                present_word,
+            ],
+            timeline_variables: uil.randomization.randomizeStimuli(
+                stimuli.table,
+                MAX_SUCCEEDING_ITEMS_OF_TYPE,
+                'item_type',
+            ),
+            randomize_order: false // this should be false if uil randomization is used...
+        };
 
         let trial_procedure_random = {
             timeline:[
@@ -709,8 +708,8 @@
         // NOTE options below! comment/uncomment for regular vs restrained randomization
         // true randomness is better for the current template's amount of items...
 
-        //timeline.push(trial_procedure_pseudo_random); // don't do this with little stimuli
-        timeline.push(trial_procedure_random);
+        timeline.push(trial_procedure_pseudorandom); // don't do this with little stimuli
+        //timeline.push(trial_procedure_random);
         
         timeline.push(end_screen);
 
