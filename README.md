@@ -1,13 +1,24 @@
 # jspsych-audlexdec
-Template [auditory lexical decision](https://en.wikipedia.org/wiki/Lexical_decision_task) experiment. 
+Auditory [Lexical Decision](https://en.wikipedia.org/wiki/Lexical_decision_task) Experiment (template). 
+
+# Connected templates
+
+The current status of cnnected Lexical Decision Templates
+
+### Visual Templates
+1. [vislexdec](https://github.com/UiL-OTS-labs/jspsych-vislexdec)
+2. [vislexdec-vp](https://github.com/UiL-OTS-labs/jspsych-vislexdec-vp)
+3. [vislexdec-vp-mp](https://github.com/UiL-OTS-labs/jspsych-vislexdec-vp-vm)
+
+### Audio and/or visual Templates
+4. [audlexdec](https://github.com/UiL-OTS-labs/jspsych-audlexdec-vp)
+5. [audlexdec-vp](https://github.com/UiL-OTS-labs/jspsych-audlexdec-vp)
+6. [audlexdec-vp-mp](https://github.com/UiL-OTS-labs/jspsych-audlexdec-vp-mp)
 
 # Task Description
 
 ## Short description
-
-
-## Longer description
-
+The most basic auditory lexical decision task: the participant sees a fixation cross and hears a real word or a non existing word. The task is to respond as quickly as posiible and indicate wther the heard word is a real word or not.
 
 # Getting started (the easy way, working internet connection required)
 For now, the easiest way to test these templates, is:
