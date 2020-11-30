@@ -87,9 +87,8 @@
     <body></body>
     <script>
     
-    // Wait till the browser has loaded all files, then execute the
+    // Wait until the browser has loaded all files, then execute the
     // contents of this method
-    
     window.addEventListener('load', function() {
 
         let stimuli = pickRandomGroup();
@@ -97,8 +96,7 @@
         // Experiment logic variables
         // Used by survey
         var repeat_survey = false;
-
-        // used by the keyboard validation, overly verbose...
+        
         var repeat_validate_left_key = false;
         var repeat_validate_right_key = false;
 
@@ -106,12 +104,11 @@
         var right_key_confirmed = false;
         
         var chosen_keyboard = undefined;
-
-        // first, i'll put the preloaders here, but maybe it's better in stimuli.js?
-        
-        var beep_audio = ['./sounds/beep.mp3'];
         
         ////////////////////////// media preloading ///////////////////////////////////////
+        
+        var beep_audio = ['./sounds/beep.mp3'];
+
 
         // create list of all audio files for preloading
         var practice_audio = []; //here we want (path) audio files
@@ -119,22 +116,15 @@
         
         for (var i=0; i< practice_items.length; i++) {
             practice_audio.push(practice_items[i].filename);
-            console.log('loaded practice audio as "practice_audio"');
         };
 
-        console.log(practice_audio);
-
-        // ctest audio list
+        // test audio list
         var test_audio = []; // the same...
         let test_items = stimuli.table; //let's just have them 'before'
-        console.log(test_items);
         
         for (var i=0; i< test_items.length; i++) {
             test_audio.push(test_items[i].filename);
-            console.log('loaded test audio as "test_audio"');
         };
-
-        console.log(test_audio);
 
         /////////////////// functions for key setting /////////////////////////////////
 
@@ -177,7 +167,6 @@
         });
 
         // screens/(sub-)(trial-)phases...////////////////////////////////////////////////////
-
 
         let start_screen = {
             type: 'html-button-response',
@@ -521,13 +510,11 @@
             length: 2,
         };
 
-
-
         let present_word = {
             type: 'audio-keyboard-response',
-            stimulus: jsPsych.timelineVariable('filename'), //this may nee inline func
+            stimulus: jsPsych.timelineVariable('filename'),
             choices: present_word_choices,
-            prompt: "########",
+            prompt: "",
             trial_ends_after_audio: false,
             trial_duration: RESPONSE_TIMEOUT_DURATION,
             response_ends_trial: true,
@@ -556,10 +543,9 @@
                         correct = data.key_press == convertToKeyCode(incorrect_key);
                         break;
                     default:
-                        correct = 'unsure, this should not happen!'; //data.key_press == convertToKeyCode(incorrect_key);
+                        correct = 'unsure, this should not happen!';
                         break;
-                }
-
+                }        
                 data.correct = correct;
             }
         };
@@ -604,7 +590,6 @@
                 data.audio_checked = true;
             }
         };
-
 
         // (timeline) procedures //////////////////////////////////////////////////////////
 

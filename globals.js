@@ -2,7 +2,7 @@
 const FIXCROSS_DURATION = 1000;
 const INTERTRIAL_INTERVAL = 1000; //new
 
-const WORD_DURATION = 1000;
+//``const WORD_DURATION = 1000;
 const RESPONSE_TIMEOUT_DURATION = 2000; //auto, inluding audio playback duration?
 const FEEDBACK_DURATION = 1000;
 
