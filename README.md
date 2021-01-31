@@ -7,7 +7,7 @@ Please read the [generic documentation](https://github.com/UiL-OTS-labs/jspsych-
 # Task description
 
 ### Short description
-The most basic auditory lexical decision task: the participant sees a fixation cross and hears a real word or a non existing word (non-word). The task is to respond as quickly as posiible and indicate wether the heard word is a real word or not.
+The most basic auditory lexical decision task: the participant sees a fixation cross and hears a real word or a non existing word (non-word). The task is to respond as quickly as possible and indicate wether the heard word is a real word or not.
 
 # Output
 
@@ -21,7 +21,7 @@ Essential output for the _'true experimental'_ purpose in this template are:
 
 The crucial trial/sub-trial phase (decision phase) output may look similar to this:
 
-	```json
+```json
 	{
 		"rt": 1335,
 		"stimulus": "./sounds/hot.wav",
@@ -45,8 +45,8 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 		"yes_key": "A",
 		"no_key": "L"
 	},
-	...
-	```
+	//(...)
+```
 
 # Getting started (the easy way, working internet connection required)
 For now, the easiest way to test these templates, is:
@@ -55,6 +55,9 @@ For now, the easiest way to test these templates, is:
 2. Unzip at a location of your choosing.
 3. Inside the folder is a file called index.html, double click it in order to open it
    in a browser.
+
+
+
 
 
   

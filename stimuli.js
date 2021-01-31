@@ -18,8 +18,8 @@ const LISTS = ["my_one_and_only_list"];
 // ];
 
 const PRACTICE_ITEMS = [
-    { id: 1, item_type: NON_WORD, word: "palve", filename: "./sounds/palve.wav", correct: 0 },
-    { id: 2, item_type: REAL_WORD, word: "hot", filename: "./sounds/hot.wav", correct: 1 }
+    { id: 1, item_type: PRACTICE, word: "palve", filename: "./sounds/palve.wav", correct: 0 },
+    { id: 2, item_type: PRACTICE, word: "hot", filename: "./sounds/hot.wav", correct: 1 }
 ];
 
 const LIST_1 = [
@@ -50,7 +50,7 @@ const TEST_ITEMS = [
  * Returns an object with a list and a table, the list will always indicate
  * "practice" since it are the practice items
  *
- * @returns {object} object with group and table fields
+ * @returns {object} object with list and table fields
  */
 function getPracticeItems() {
     return {list_name : "practice", table : PRACTICE_ITEMS};

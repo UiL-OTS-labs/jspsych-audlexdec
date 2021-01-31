@@ -147,10 +147,11 @@ const DEBRIEF_MESSAGE_NO_CONSENT = `
     <h2>Thank you for <i>not</i> participating!</h2>
     `;
 const DEBRIEF_MESSAGE_NO_CONSENT_DURATION = 3000;
+
 const CONSENT_STATEMENT = `
     Yes, I consent to the use of my answers for scientific research.
     `;
-// const SHORT_AGREE_STRING = "Yes, I agree";
+
 const PROCEED_BUTTON_TEXT = "Continue";
 const CONSENT_REFERENCE_NAME = 'consent';
 const IF_REQUIRED_FEEDBACK_MESSAGE = `

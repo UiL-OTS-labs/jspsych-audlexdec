@@ -3,8 +3,7 @@ const ACCESS_KEY = 'zeeekretkeey';
 
 // Default behavior of (sub) trial phases.
 const FIXCROSS_DURATION = 1000;
-//const INTERTRIAL_INTERVAL = 1000; //new
-const DEFAULT_ITI = 500; // inter-trial interval (post_trial_gap)
+const DEFAULT_ITI = 500; 
 
 //const WORD_DURATION = 1000;
 const RESPONSE_TIMEOUT_DURATION = 2000; //auto, inluding audio playback duration?
@@ -22,11 +21,11 @@ const NO_BUTTON_TEXT = "No";
 const TRUE_BUTTON_TEXT = "True";
 const FALSE_BUTTON_TEXT = "False";
 
-// Bail out string for mobiles
-const BAIL_OUT_MOBILE_TEXT = "Please run this experiment on a PC or Laptop."
-
 // Deafult restrictions of minimal browser dimensions
 const MIN_WIDTH = 800;
 const MIN_HEIGHT = 600;
+
+// Bail out string for mobiles
+const BAIL_OUT_MOBILE_TEXT = "Please run this experiment on a PC or Laptop."
 
 

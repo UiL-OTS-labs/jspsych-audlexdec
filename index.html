@@ -122,28 +122,24 @@
         let stimuli = pickRandomList();
         console.log("The selected list is %s", stimuli.list_name);
         
-        // media preloading /////////////////////////////////////////////////////
+        ////////////////////////// media preloading ///////////////////////////////////////
+        
         var beep_audio = ['./sounds/beep.mp3'];
-
-        // create list of all audio files for preloading
-        var practice_audio = []; //here we want (path) audio files
         let practice_items = getPracticeItems().table;
-
+        var practice_audio = [];
         for (var i=0; i< practice_items.length; i++) {
             practice_audio.push(practice_items[i].filename);
+            console.log('loaded practice audio as "practice_audio"');
         };
-
-        // real 'test' audio list
-        var test_audio = [];
-
+        
         let test_items = stimuli.table;
-
+        var test_audio = [];
         for (var i=0; i< test_items.length; i++) {
             test_audio.push(test_items[i].filename);
+            console.log('loaded test audio as "test_audio"');
         };
-        console.log(test_items)
         
-        // experiment logic var
+        // experiment logic vars
         var handpref = undefined;
 
         // regular JS functions
@@ -387,20 +383,19 @@
         // kb layout
         timeline.push(select_keyboard_layout);
         
-        // kb important keys
+        // kb important keys (keyboard.js)
         timeline.push(keyboard_set_key_left_procedure);
         timeline.push(keyboard_set_key_right_procedure);
 
+        // test/set audio level (soundtest.js)
         timeline.push(test_audio_looped);
         
-        // task instruction
+        // task instruction (instructions.js)
         timeline.push(instruction_screen_practice);
 
         // get ready (practice)
         timeline.push(participant_keyboard_control_start);
-        
         timeline.push(practice_procedure);
-
         timeline.push(well_done_screen);
 
         // get ready (test)
@@ -419,6 +414,7 @@
             jsPsych.init({
                 timeline: timeline,
                 preload_audio: [
+                    beep_audio,
                     practice_audio,
                     test_audio
                     ],
@@ -437,7 +433,5 @@
             document.body.appendChild(paragraph);
         }
     })
-
     </script>
 </html>
-
