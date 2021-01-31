@@ -141,7 +141,8 @@ const CONSENT_HTML_STYLE_UU = `<style>
         `
 const CONSENT_HTML = `
     <p>Insert your information letter here; for more information, see the <a href="https://fetc-gw.wp.hum.uu.nl/en/" target="_blank">FEtC-H website</a></p>
-    `
+    `;
+    
 const DEBRIEF_MESSAGE_NO_CONSENT = `
     <h1>End of the experiment</h1><BR><BR>
     <h2>Thank you for <i>not</i> participating!</h2>
