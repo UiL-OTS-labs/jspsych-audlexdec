@@ -5,8 +5,6 @@ Auditory [Lexical Decision](https://en.wikipedia.org/wiki/Lexical_decision_task)
 Please read the [generic documentation](https://github.com/UiL-OTS-labs/jspsych-uil-template-docs) for some context and scope.
 
 # Task description
-
-### Short description
 The most basic auditory lexical decision task: the participant sees a fixation cross and hears a real word or a non existing word (non-word). The task is to respond as quickly as possible and indicate wether the heard word is a real word or not.
 
 ### Reference:
@@ -15,7 +13,6 @@ The most basic auditory lexical decision task: the participant sees a fixation c
         Journal of Verbal Learning and Verbal Behavior, 9, 487≠494.
 
 # Output
-
 The data of _all_ (sub) _trial phases_ are logged in the data, but the output data can be filtered after data collection in many ways.
 Please read the [general primer on jsPsych's data](https://github.com/UiL-OTS-labs/jspsych-output) if you are new to jsPsych data output.
 
