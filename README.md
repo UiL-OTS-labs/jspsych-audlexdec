@@ -9,6 +9,11 @@ Please read the [generic documentation](https://github.com/UiL-OTS-labs/jspsych-
 ### Short description
 The most basic auditory lexical decision task: the participant sees a fixation cross and hears a real word or a non existing word (non-word). The task is to respond as quickly as possible and indicate wether the heard word is a real word or not.
 
+### Reference:
+        Rubenstein, H., Garfield, L., & Millikan, J.A. (1970). 
+        Homographic entries in the internal lexicon. 
+        Journal of Verbal Learning and Verbal Behavior, 9, 487≠494.
+
 # Output
 
 The data of _all_ (sub) _trial phases_ are logged in the data, but the output data can be filtered after data collection in many ways.
