@@ -7,6 +7,10 @@ Please read the [generic documentation](https://github.com/UiL-OTS-labs/jspsych-
 # Task description
 The most basic auditory lexical decision task: the participant sees a fixation cross and hears a real word or a non existing word (non-word). The task is to respond as quickly as possible and indicate wether the heard word is a real word or not.
 
+Crucial trial phases (sub trial phases):
+- Fixation cross
+- Auditory item (Decision phase)
+
 ### Reference:
         Rubenstein, H., Garfield, L., & Millikan, J.A. (1970). 
         Homographic entries in the internal lexicon. 
@@ -49,14 +53,30 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 	},
 	//(...)
 ```
+# Getting started 
+People _affiliated to our lab__ can use the information [from our lab webiste](https://uilots-labs.wp.hum.uu.nl/experiments/overview/) and expand the "Online experiments using jsPsych" section for details. Please follow [this how-to](https://uilots-labs.wp.hum.uu.nl/how-to/online-experimenting/).
 
-# Getting started (the easy way, working internet connection required)
-For now, the easiest way to test these templates, is:
+### Make your experiment ready for use with the data server
 
-1. Download this repository by clicking the green code button above and Download zip.
-2. Unzip at a location of your choosing.
-3. Inside the folder is a file called index.html, double click it in order to open it
-   in a browser.
+### Update access key
+In the file `globals.js` is a variable:
+```javascript
+const ACCESS_KEY = '00000000-0000-0000-0000-000000000000';
+```
+Before uploading your experimentto the UiL-OTS data server, you will need to change this to the access_key that you obtained when your experiment was approved. For elaborate info see `globals.js`.
+
+
+### Adapting stimuli
+- Open the file `stimuli.js` in your plain text editor.
+- There is a list, called LIST_1:
+
+```javacript
+const LIST_1 = [ // stimuli and timeline variables
+
+```
+-  This list can be adapted to your own needs, i.e, you can replace values, make the list longer (don't forget to increment the 'id' values for new items!).
+- If you need to implement a more complex design, you should read the `stimuli.js` file (and its comment sections) a little better. 
+- For an example of a Latin square design, please have a look [here](https://github.com/UiL-OTS-labs/jspsych-spr-mw).
 
 
 
