@@ -56,8 +56,8 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 Variable name (key) | Description          | Unit  | Type           | Comments                             | jsPsych default | Template default | Plugin name
 --------------------|----------------------|-------|----------------|--------------------------------------|-----------------|------------------|------------
 "rt"                | Reaction Time        | ms.   | float          | Reaction time in milliseconds        | yes             |                  |            
-stimulus"           | stimulus (audio file)|       | string/html    | For instance: "./sounds/hot.wav"     | yes             |                  |
-"key_press"         | Keyboard response    |       | string/object? | https://en.wikipedia.org/wiki/ASCII  | yes             |                  | html-keyboard-response
+"stimulus"          | stimulus (audio file)|       | string/html    | For instance: "./sounds/hot.wav"     | yes             |                  |
+"key_press"         | Keyboard response    |       | string/object? | https://en.wikipedia.org/wiki/ASCII  | yes             |                  | html-keyboard-response/audio-keyboard-response
 "condition"         | Condition            |       | string         | See ```stimuli.js```                 | no              | yes              |
 "word"              | Decision phase item  |       | string/html    | String (represents "audio")          | no              | yes              | 
 "filename"          | Decision phase item  |       | string/html    | Path to 'word' audio"                | no              | yes              | audio-keyboard-response 
