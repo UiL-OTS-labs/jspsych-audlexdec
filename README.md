@@ -60,11 +60,12 @@ stimulus"           | stimulus (audio file)|       | string/html    | For instan
 "key_press"         | Keyboard response    |       | string/object? | https://en.wikipedia.org/wiki/ASCII  | yes             |                  | html-keyboard-response
 "condition"         | Condition            |       | string         | See ```stimuli.js```                 | no              | yes              |
 "word"              | Decision phase item  |       | string/html    | String (represents "audio")          | no              | yes              | 
+"filename"          | Decision phase item  |       | string/html    | Path to 'word' audio"                | no              | yes              | audio-keyboard-response 
 "id"                | ID/code              |       |                | (See `stimuli.js` and `index.html`)  |                 | yes              |                  |
 "trial_phase"       | Trial phase          |       |                | (...)                                | no              | yes              | 
 "useful_data_flag"  | Filter flag          |       | boolean        |                                      | no              | yes              | 
-_"expected_answer"_ | TODO change!         |       | todo           | Now (still) named "correct_response" | no              | no/yes/willbe.   | 
-"trial_type"        | What plugin was used |       |                |                                      | yes             |                  | "html-keyboard-response"
+_"expected_answer"_ | TODO change!         |       | todo           | Now (still) named "correct_response" | no              | no/yes/willbe    | 
+"trial_type"        | What plugin was used |       |                |                                      | yes             |                  | "audio-keyboard-response"
 "trial_index"       | jsPsych index        |       |                |                            	   | yes             |                  |	
 "time_elapsed".     | jsPsych time object  | ms    | int (/float?)  | For instance: 45062                  | yes             |                  |
 "internal_node_id.  | jsPsych node object  |       |                | For instance:"0.0-11.0-1.4"          | yes             |                  |
