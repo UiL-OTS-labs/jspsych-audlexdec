@@ -91,7 +91,7 @@ In the file `globals.js` is a variable:
 ```javascript
 const ACCESS_KEY = '00000000-0000-0000-0000-000000000000';
 ```
-Before uploading your experimentto the UiL-OTS data server, you will need to change this to the access_key that you obtained when your experiment was approved. For elaborate info see `globals.js`.
+Before uploading your experiment to the UiL OTS data server, you will need to change this to the access_key that you obtained when your experiment was approved. For elaborate info see `globals.js`.
 
 
 ### Adapting stimuli
