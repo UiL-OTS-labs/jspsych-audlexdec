@@ -18,19 +18,19 @@ const LISTS = ["my_one_and_only_list"];
 // ];
 
 const PRACTICE_ITEMS = [
-    { id: 1, item_type: PRACTICE, word: "palve", filename: "./sounds/palve.wav", correct: 0 },
-    { id: 2, item_type: PRACTICE, word: "hot", filename: "./sounds/hot.wav", correct: 1 }
+    { id: 1, item_type: PRACTICE, word: "palve", filename: "./sounds/palve.wav", expected_answer: 0 },
+    { id: 2, item_type: PRACTICE, word: "hot", filename: "./sounds/hot.wav", expected_answer: 1 }
 ];
 
 const LIST_1 = [
-    { id: 1, item_type: NON_WORD, word: "slirque", filename: "./sounds/slirque.wav", correct: 0 },
-    { id: 2, item_type: NON_WORD, word: "crawse", filename: "./sounds/crawse.wav", correct: 0 },
-    { id: 3, item_type: NON_WORD, word: "thwurp", filename: "./sounds/thwurp.wav", correct: 0 },
-    { id: 4, item_type: NON_WORD, word: "clem", filename: "./sounds/clem.wav", correct: 0 },
-    { id: 5, item_type: REAL_WORD, word: "white", filename: "./sounds/white.wav", correct: 1 },
-    { id: 6, item_type: REAL_WORD, word: "travel", filename: "./sounds/travel.wav", correct: 1 },
-    { id: 7, item_type: REAL_WORD, word: "letter", filename: "./sounds/letter.wav", correct: 1 },
-    { id: 8, item_type: REAL_WORD, word: "clown", filename: "./sounds/clown.wav", correct: 1  }
+    { id: 1, item_type: NON_WORD, word: "slirque", filename: "./sounds/slirque.wav", expected_answer: 0 },
+    { id: 2, item_type: NON_WORD, word: "crawse", filename: "./sounds/crawse.wav", expected_answer: 0 },
+    { id: 3, item_type: NON_WORD, word: "thwurp", filename: "./sounds/thwurp.wav", expected_answer: 0 },
+    { id: 4, item_type: NON_WORD, word: "clem", filename: "./sounds/clem.wav", expected_answer: 0 },
+    { id: 5, item_type: REAL_WORD, word: "white", filename: "./sounds/white.wav", expected_answer: 1 },
+    { id: 6, item_type: REAL_WORD, word: "travel", filename: "./sounds/travel.wav", expected_answer: 1 },
+    { id: 7, item_type: REAL_WORD, word: "letter", filename: "./sounds/letter.wav", expected_answer: 1 },
+    { id: 8, item_type: REAL_WORD, word: "clown", filename: "./sounds/clown.wav", expected_answer: 1  }
 ];
 
 const TEST_ITEMS = [
