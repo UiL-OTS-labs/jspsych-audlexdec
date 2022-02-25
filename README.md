@@ -38,7 +38,7 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 		"id": 2,
 		"trial_phase": "present_word",
 		"useful_data_flag": true,
-		"correct_response": 1,
+		"expected_response": 1,
 		"trial_type": "audio-keyboard-response",
 		"trial_index": 15,
 		"time_elapsed": 36569,
@@ -56,24 +56,24 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 ```
 Variable name (key) | Description          | Unit  | Type           | Comments                             | jsPsych default | Template default | Plugin name
 --------------------|----------------------|-------|----------------|--------------------------------------|-----------------|------------------|------------
-"rt"                | Reaction Time        | ms.   | float          | Reaction time in milliseconds        | yes             |                  |            
+"rt"                | Reaction Time        | ms.   | float          | Reaction time in milliseconds        | yes             |                  |
 "stimulus"          | stimulus (audio file)|       | string/html    | For instance: "./sounds/hot.wav"     | yes             |                  |
 "key_press"         | Keyboard response    |       | string/object? | https://en.wikipedia.org/wiki/ASCII  | yes             |                  | html-keyboard-response/audio-keyboard-response
 "condition"         | Condition            |       | string         | See ```stimuli.js```                 | no              | yes              |
-"word"              | Decision phase item  |       | string/html    | String (represents "audio")          | no              | yes              | 
-"filename"          | Decision phase item  |       | string/html    | Path to 'word' audio"                | no              | yes              | audio-keyboard-response 
-"id"                | ID/code              |       |                | (See `stimuli.js` and `index.html`)  |                 | yes              |                  |
-"trial_phase"       | Trial phase          |       |                | (...)                                | no              | yes              | 
-"useful_data_flag"  | Filter flag          |       | boolean        |                                      | no              | yes              | 
-_"expected_answer"_ | TODO change!         |       | todo           | Now (still) named "correct_response" | no              | no/yes/willbe    | 
+"word"              | Decision phase item  |       | string/html    | String (represents "audio")          | no              | yes              |
+"filename"          | Decision phase item  |       | string/html    | Path to 'word' audio"                | no              | yes              | audio-keyboard-response
+"id"                | ID/code              |       |                | (See `stimuli.js` and `index.html`)  |                 | yes              |
+"trial_phase"       | Trial phase          |       |                | (...)                                | no              | yes              |
+"useful_data_flag"  | Filter flag          |       | boolean        |                                      | no              | yes              |
+"expected_answer"   |                      |       | todo           |                                      | no              | no/yes/willbe    |
 "trial_type"        | What plugin was used |       |                |                                      | yes             |                  | "audio-keyboard-response"
-"trial_index"       | jsPsych index        |       |                |                            	   | yes             |                  |	
+"trial_index"       | jsPsych index        |       |                |                            	       | yes             |                  |
 "time_elapsed".     | jsPsych time object  | ms    | int (/float?)  | For instance: 45062                  | yes             |                  |
 "internal_node_id.  | jsPsych node object  |       |                | For instance:"0.0-11.0-1.4"          | yes             |                  |
 "subject"           | Subject ID           |       |                | For instance: "8oo722dq"             |                 | yes              |
-"list"              | Stimulus list name.  |       | string         | For instance: "my_one_and_only_list" | no              | yes              | 
-"correct"           | Scoring result       |       | Boolean        | 'true or false' score of response    |                 | yes              |   
-"integer_correct"   | Scoring result       |       | integer        | 1 or 0 in case of corect or incorrect| no              | yes              |   
+"list"              | Stimulus list name.  |       | string         | For instance: "my_one_and_only_list" | no              | yes              |
+"correct"           | Scoring result       |       | Boolean        | 'true or false' score of response    |                 | yes              |
+"integer_correct"   | Scoring result       |       | integer        | 1 or 0 in case of corect or incorrect| no              | yes              |
 "key_chosen_ascii"  |                      |       |                | For instance: 65                     | no              | yes              |
 "key_chosen_char"   |                      |       |                | For instance: "A"                    | no              | yes              |
 "yes_key"           |                      |       |                | For instance:  "A"                   | no              | yes              |
