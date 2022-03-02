@@ -12,9 +12,9 @@ Crucial trial phases (sub trial phases):
 - Auditory item (Decision phase)
 
 ### Reference:
-        Rubenstein, H., Garfield, L., & Millikan, J.A. (1970). 
-        Homographic entries in the internal lexicon. 
-        Journal of Verbal Learning and Verbal Behavior, 9, 487≠494.
+    Rubenstein, H., Garfield, L., & Millikan, J.A. (1970).
+    Homographic entries in the internal lexicon.
+    Journal of Verbal Learning and Verbal Behavior, 9, 487≠494.
 
 # Output
 The data of _all_ (sub) _trial phases_ are logged in the data, but the output data can be filtered after data collection in many ways.
@@ -28,31 +28,30 @@ Essential output for the _'true experimental'_ purpose in this template are:
 The crucial trial/sub-trial phase (decision phase) output may look similar to this:
 
 ```json
-	{
-		"rt": 1335,
-		"stimulus": "./sounds/hot.wav",
-		"key_press": 65,
-		"condition": "REAL_WORD",
-		"word": "hot",
-		"filename": "./sounds/hot.wav",
-		"id": 2,
-		"trial_phase": "present_word",
-		"useful_data_flag": true,
-		"expected_response": 1,
-		"trial_type": "audio-keyboard-response",
-		"trial_index": 15,
-		"time_elapsed": 36569,
-		"internal_node_id": "0.0-8.0-1.1",
-		"subject": "hygb1h3q",
-		"list": "my_one_and_only_list",
-		"correct": true,
-		"integer_correct": 1,
-		"key_chosen_ascii": 65,
-		"key_chosen_char": "A",
-		"yes_key": "A",
-		"no_key": "L"
-	},
-	//(...)
+{
+    "rt": 1335,
+    "stimulus": "./sounds/hot.wav",
+    "key_press": 65,
+    "condition": "REAL_WORD",
+    "word": "hot",
+    "filename": "./sounds/hot.wav",
+    "id": 2,
+    "trial_phase": "present_word",
+    "useful_data_flag": true,
+    "expected_response": 1,
+    "trial_type": "audio-keyboard-response",
+    "trial_index": 15,
+    "time_elapsed": 36569,
+    "internal_node_id": "0.0-8.0-1.1",
+    "subject": "hygb1h3q",
+    "list": "my_one_and_only_list",
+    "correct": true,
+    "integer_correct": 1,
+    "key_chosen_ascii": 65,
+    "key_chosen_char": "A",
+    "yes_key": "A",
+    "no_key": "L"
+},
 ```
 Variable name (key) | Description          | Unit  | Type           | Comments                             | jsPsych default | Template default | Plugin name
 --------------------|----------------------|-------|----------------|--------------------------------------|-----------------|------------------|------------
